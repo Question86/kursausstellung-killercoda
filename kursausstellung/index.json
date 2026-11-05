@@ -13,7 +13,13 @@
           "target": "/root/kursausstellung/"
         }
       ]
-    }
+    },
+    "steps": [
+      {
+        "title": "Ausstellung auf der VM",
+        "text": "step1.md"
+      }
+    ]
   },
   "backend": {
     "imageid": "ubuntu"
