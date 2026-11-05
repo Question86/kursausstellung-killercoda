@@ -1,0 +1,21 @@
+{
+  "title": "Kurswoche zum Anfassen",
+  "description": "Richtet eine CirrOS-VM ein und veroeffentlicht die gepruefte Azure-Kursausstellung automatisch.",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "setup.sh",
+          "target": "/root/kursausstellung/"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
