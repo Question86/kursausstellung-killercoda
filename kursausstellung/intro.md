@@ -1,17 +1,15 @@
 # Kursausstellung automatisch starten
 
-Klicke auf **START**. Das Szenario richtet den Ubuntu-Host, die virtuelle CirrOS-Maschine `nordlicht-a` und die vollstaendige Kursausstellung automatisch ein. **Kein Terminalbefehl und kein Upload erforderlich.**
+Die Einrichtung beginnt automatisch beim Oeffnen dieses Szenarios. Der Ubuntu-Host startet die virtuelle CirrOS-Maschine `nordlicht-a` und stellt darin die vollstaendige Kursausstellung bereit. **Kein Terminalbefehl und kein Upload erforderlich.**
 
-Warte im Terminal auf **FERTIG**. Erst nach erfolgreichem Hash-Abgleich aller 19 Webdateien wird Erfolg gemeldet.
+Klicke auf **START**, um den Ausstellungslink dauerhaft anzuzeigen. Die Einrichtung kann einige Minuten dauern. **FERTIG** im Terminal bestaetigt den erfolgreichen Hash-Abgleich aller 19 Webdateien.
 
 ## Ausstellung oeffnen
 
 [Zur Kursausstellung]({{TRAFFIC_HOST1_8081}})
 
-[Traffic / Ports oeffnen]({{TRAFFIC_SELECTOR}})
+Falls die Website anfangs noch **502 Bad Gateway** zeigt, laeuft die Einrichtung noch: kurz warten und die Ausstellungsseite erneut laden.
 
-Der Weg ist: Ubuntu-Port 8081 → lokale Weiterleitung 8080 → CirrOS-Gast → BusyBox-Webserver → HTML/JavaScript-Dateien. Die Website wird vom Gast ausgeliefert, nicht von einem Windows-PC.
-
-Der Szenario-Tab muss offen bleiben. Nach Ablauf der Sitzung dieses Szenario erneut starten; der Link zur laufenden Website wird dabei neu erzeugt. Es wird keine dauerhafte Maschine gebucht und kein kostenpflichtiges Upgrade ausgewaehlt.
+Lass diesen Szenario-Tab offen. Nach Ablauf der Sitzung oeffne dasselbe Szenario erneut. Die neue Umgebung richtet die VM und die Ausstellung wieder automatisch ein und erzeugt einen neuen Ausstellungslink.
 
 Nur oeffentliche Unterrichtsinhalte verwenden. Killercoda-Sitzungs-URLs sind ungeschuetzt und koennen Zugriff auf die Uebungsumgebung ermoeglichen: [Anbieterinformation](https://killercoda.com/security).
