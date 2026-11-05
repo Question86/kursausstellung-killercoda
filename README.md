@@ -1,11 +1,17 @@
-# Killercoda-Szenario fuer die Kursausstellung
+# Kurswoche zum Anfassen auf Killercoda
 
-Der Ordner `kursausstellung/` ist ein vollstaendiges Killercoda-Szenario mit automatischem Foreground-Setup und eingebettetem Webdateipaket. Der enthaltene Setup-Adapter ist bytegleich mit dem erfolgreich auf Ubuntu/QEMU/CirrOS ausgefuehrten Adapter.
+[VM und Ausstellung automatisch starten](https://killercoda.com/question86/scenario/kursausstellung)
 
-Einmalige Aktivierung: Repository in Killercoda Creator verbinden und das importierte Szenario pruefen. Erst danach den tatsaechlich angezeigten Szenario-Link in `scenario-url.txt` neben dem Windows-Starter speichern. Es wird kein Link geraten.
+1. Szenario oeffnen und bei Killercoda anmelden, falls erforderlich.
+2. Die Einrichtung beginnt automatisch. START zeigt die dauerhafte Anleitung.
+3. Nach der Einrichtung auf **Zur Kursausstellung** klicken. Ein Terminalbefehl oder Upload ist nicht erforderlich. Ein anfaengliches 502 waehrend der Einrichtung verschwindet nach Abschluss; dann die Ausstellungsseite neu laden.
 
-Nach Aktivierung loest START im eigenen Szenario VM-Einrichtung und Deployment aus. Der allgemeine Ubuntu-Playground fuehrt dieses Projekt nicht automatisch aus.
+Der Ubuntu-Host installiert QEMU und startet den CirrOS-Gast `nordlicht-a` mit 1 vCPU und 512 MB RAM. Der Gast liefert die vollstaendige Ausstellung per BusyBox-Webserver aus; der Host stellt sie ueber Port 8081 bereit. Das eingebettete Paket enthaelt 19 gepruefte Dateien.
 
-Offizielle Vertragsbeispiele: https://github.com/killercoda/scenario-examples/tree/main/foreground-background-scripts und https://github.com/killercoda/scenario-examples/tree/main/upload-assets . Einrichtung: https://killercoda.com/creators/get-started .
+Die Einrichtung laeuft ueber den nativen Background-Hook unabhaengig davon, ob das eingebettete Browser-Terminal bereits geladen ist. Das Setup meldet FERTIG erst nach erfolgreichem SHA-256-Abgleich aller 19 Dateien ueber den Gast-Webserver. Dieser automatische Start wurde am 05.11.2026 in einer frischen Killercoda-Umgebung beobachtet; die Ausstellung und das Quiz wurden danach in einem unabhaengigen Browser geoeffnet.
 
-Das Repository ist unter https://github.com/Question86/kursausstellung-killercoda veroeffentlicht. Das Killercoda-Creator-Profil heisst `question86`. Der erfolgreiche Import und ein echter Szenario-Start werden noch geprueft; bis dahin wird kein funktionsfaehiger One-Button-Start behauptet.
+Lass den Szenario-Tab offen. Nach Ablauf der Sitzung denselben Szenario-Link erneut oeffnen. Die neue Umgebung richtet VM und Ausstellung wieder ein; ihr Ausstellungslink aendert sich. Es wird keine dauerhafte VM angelegt.
+
+Der Windows-Starter benoetigt die Datei `scenario-url.txt` mit obigem Szenario-Link neben der EXE. Die ausdruecklich getrennte lokale Vorschau ist kein VM-Deployment.
+
+Offizielle Schnittstellen: [Szenario-Beispiele](https://github.com/killercoda/scenario-examples), [Creator-Einrichtung](https://killercoda.com/creators/get-started).
